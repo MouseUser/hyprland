@@ -1,0 +1,12 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/hatsunemiku.toml"
+]
+
+[window]
+opacity = 0.2
+decorations = "Transparent"
+blur = true
+
+[font]
+size = 11.5
