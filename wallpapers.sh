@@ -22,4 +22,7 @@ random_index=$((RANDOM % ${#papers[@]}))
 random_paper="${papers[$random_index]}"
 
 # call wallpaperengine command with random wallpaper
-linux-wallpaperengine --screen-root DP-2 --screen-root HDMI-A-1 --screen-root HDMI-A-2 --scaling fill --clamp border --disable-mouse --fps 30 --silent --bg "$random_paper"
+linux-wallpaperengine --screen-root DP-2 --scaling fill --clamp border --disable-mouse --fps 30 --silent --bg "$random_paper" & \
+linux-wallpaperengine --screen-root HDMI-A-1 --scaling fill --clamp border --disable-mouse --fps 30 --silent --bg "$random_paper" & \
+linux-wallpaperengine --screen-root HDMI-A-2 --scaling fill --clamp border --disable-mouse --fps 30 --silent --bg "$random_paper"
+# is this ^ optimal? probably not but i dont care
